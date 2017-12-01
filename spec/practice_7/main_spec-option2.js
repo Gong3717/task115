@@ -1,16 +1,20 @@
 "use strict";
-import _ from "lodash";
-import chai from "chai";
-import sinon from "sinon";
-import sinonChai from "sinon-chai";
-const expect = chai.expect;
-chai.use(sinonChai);
-
-import Person from "../../src/practice_7/person.js";
-import Student from "../../src/practice_7/student.js";
-import Teacher from "../../src/practice_7/teacher-option2.js";
-import Class from "../../src/practice_7/class.js";
-
+// import _ from "lodash";
+// import chai from "chai";
+// import sinon from "sinon";
+// import sinonChai from "sinon-chai";
+// const expect = chai.expect;
+// chai.use(sinonChai);
+//
+// import Person from "../../src/practice_7/person.js";
+// import Student from "../../src/practice_7/student.js";
+// import Teacher from "../../src/practice_7/teacher-option2.js";
+// import Class from "../../src/practice_7/class.js";
+let Person = require("../../src/practice_7/person.js") ;
+let Student = require("../../src/practice_7/student.js") ;
+let Teacher = require("../../src/practice_7/teacher-option2.js") ;
+let Class = require("../../src/practice_7/class.js") ;
+let expect = require('chai').expect;
 describe("Option-2 Person", () => {
     it("should have field name and age", () => {
         const person = new Person("Tom", 21);
@@ -70,7 +74,6 @@ describe("Option-2 Person", () => {
             it("should overwrite Person introduce, introduce with name, age and class number, given teacher have class", () => {
                 const teacher = new Teacher("Tom", 21, klass);
                 const introduce = teacher.introduce();
-
                 expect(introduce).to.equal("My name is Tom. I am 21 years old. I am a Teacher. I teach Class 2.");
 
             });

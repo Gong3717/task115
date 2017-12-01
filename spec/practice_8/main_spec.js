@@ -1,16 +1,20 @@
 "use strict";
-import _ from "lodash";
-import chai from "chai";
-import sinon from "sinon";
-import sinonChai from "sinon-chai";
-const expect = chai.expect;
-chai.use(sinonChai);
-
-import Person from "../../src/practice_8/person.js";
-import Student from "../../src/practice_8/student.js";
-import Teacher from "../../src/practice_8/teacher.js";
-import Class from "../../src/practice_8/class.js";
-
+// import _ from "lodash";
+// import chai from "chai";
+// import sinon from "sinon";
+// import sinonChai from "sinon-chai";
+// const expect = chai.expect;
+// chai.use(sinonChai);
+//
+// import Person from "../../src/practice_8/person.js";
+// import Student from "../../src/practice_8/student.js";
+// import Teacher from "../../src/practice_8/teacher.js";
+// import Class from "../../src/practice_8/class.js";
+let Person = require("../../src/practice_8/person.js") ;
+let Student = require("../../src/practice_8/student.js") ;
+let Teacher = require("../../src/practice_8/teacher.js") ;
+let Class = require("../../src/practice_8/class.js") ;
+let expect = require('chai').expect;
 describe("Person", () => {
     it("should have field name and age", () => {
         const person = new Person(1, "Tom", 21);
