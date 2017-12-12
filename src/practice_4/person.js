@@ -6,5 +6,8 @@ class Person{
     introduce(){
         return 'My name is ' + this.name + '. I am ' + this.age + ' years old.';
     }
+    static basic_introduce(){
+        return 'My name is ' + this.name + '. I am ' + this.age + ' years old.';
+    }
 }
 module.exports= Person;

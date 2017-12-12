@@ -6,17 +6,17 @@ class Class{
         return 'Class '+''+this.number;
     }
     assignLeader(Student){
-        if(this.number === Student.klass.number){
+        if(this === Student.klass){
             return this.leader = Student;
         }else{
             return 'It is not one of us.';
         }
     }
     appendMember(Student){
-        Student.klass.number = this.number;
-        return Student.klass.number;
+        Student.klass = this;
+        return Student.klass;
     }
 
 }
-Class.leader = '';
+//Class.leader = '';
 module.exports= Class;

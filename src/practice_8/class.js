@@ -13,5 +13,5 @@ class Class{
     }
 
 }
-Class.leader = '';
+//Class.leader = '';
 module.exports= Class;

@@ -174,7 +174,6 @@ describe("Class", () => {
             expect(student.klass).to.equal(otherKlass);
 
             klass.appendMember(student);
-            //不知道哪错了
             expect(student.klass).to.equal(klass);
           //  expect(student.klass.number).to.equal(klass.number);
         });

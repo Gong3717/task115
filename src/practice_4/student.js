@@ -5,7 +5,10 @@ class Student extends Person{
         this.klass =klass;
     }
     introduce(){
-        return super.introduce() + ' I am a Student. '  + 'I am at Class ' + this.klass + '.';
+     //  console.log(super.basic_introduce());
+       return super.introduce() + ' I am a Student. '  + 'I am at Class ' + this.klass + '.';
     }
 }
 module.exports= Student;
+// const student = new Student("Tom", 21, 2);
+// console.log(student.introduce());

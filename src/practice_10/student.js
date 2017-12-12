@@ -1,7 +1,7 @@
 let Person = require("../../src/practice_10/person.js");
 let Class =  require("../../src/practice_10/class.js");
 class Student extends Person{
-    constructor(id, name, age , klass){
+    constructor(id, name, age , klass={}){
         super(id, name, age);
         this.klass = klass;
     }
@@ -14,11 +14,11 @@ class Student extends Person{
     }
 }
 module.exports = Student;
-const klass = new Class(2);
-const otherKlass = new Class(3);
-
-const student = new Student(1, "Jerry", 21, otherKlass);
-//klass.appendMember(student);
-console.log(student.klass);
-console.log(klass);
-console.log(student);
+// const klass = new Class(2);
+// const otherKlass = new Class(3);
+//
+// const student = new Student(1, "Jerry", 21, otherKlass);
+// //klass.appendMember(student);
+// console.log(student.klass);
+// console.log(klass);
+// console.log(student);

@@ -10,13 +10,25 @@ class Teacher extends Person{
             return super.introduce() + ' I am a Teacher. I teach No Class.';
         }else{
             //只能通过测试用例，不知道怎么一次性访问数组元素，并用逗号隔开
+           //  var result=[];
+           // for( let i = 0 ; i < this.klasses.length;i++){
+           //    result.push(this.klasses[i].number);
+           // }
+           var result = this.klasses.map(function(item) {
+              return item.number;
+           });
+           //改成map
+          // console.log(result);
+           // return super.introduce() + ' I am a Teacher. I teach Class '
+           //     + this.klasses[0].number +', '+ this.klasses[1].number +'.';
             return super.introduce() + ' I am a Teacher. I teach Class '
-                + this.klasses[0].number +', '+ this.klasses[1].number +'.';
+                + result.join(', ') +'.';
         }
     }
     isTeaching(Student){
-
-
+       this.klasses.map(function(item){
+           return item === Class;
+       });
     }
 }
 module.exports= Teacher;
